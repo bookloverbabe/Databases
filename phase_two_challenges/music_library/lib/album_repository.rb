@@ -3,8 +3,8 @@ class AlbumRepository
   def all
     albums = []
     sql = 'SELECT id, title, release_year, artist_id FROM albums;'
-    result_set = DatabaseConnection.exec.params(sql, [])
-    result.set.each do |record|
+    result_set = DatabaseConnection.exec_params(sql, [])
+    result_set.each do |record|
       album = Album.new
       album.id = record['id']
       album.title = record['title']

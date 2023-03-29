@@ -3,7 +3,7 @@ require 'album_repository'
 RSpec.describe AlbumRepository do
   def reset_albums_table
     seed_sql = File.read('spec/seeds_students.sql')
-    connection = PG.connect({ host: '127.0.0.1', dname: 'students', user: your_username, password: your_password})
+    connection = PG.connect({ host: '127.0.0.1', dname: 'students', user: 'postgres', password: ENV['DATABASE_PASSWORD']})
     connection.exec(seed_sql)
   end
 

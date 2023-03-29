@@ -1,8 +1,8 @@
-RSpec.dsecribe ArtistRepository do
+RSpec.describe ArtistRepository do
  
   def reset_albums_table
     seed_sql = File.read('spec/seeds_artists.sql')
-    connection = PG.connect({ host: '127.0.0.1', dname: 'music_library_test', user: your_username, password: your_password})
+    connection = PG.connect({ host: '127.0.0.1', dname: 'music_library_test', user: 'postgres', password: ENV['DATABASE_PASSWORD']})
     connection.exec(seed_sql)
   end
   before(:each) do
