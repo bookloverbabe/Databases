@@ -1,0 +1,28 @@
+1. User story
+As a coach
+So I can get to know all students
+I want to see a list of students' names.
+
+As a coach
+So I can get to know all students
+I want to see a list of students' cohorts.
+
+2. Table name and columns
+Table name (always plural): student
+
+student name | cohort
+
+3. Column types = string/text
+id = SERIAL
+name = text
+cohort = text
+
+4. Write the SQL
+CREATE TABLE students (
+  id SERIAL PRIMARY KEY,
+  name text,
+  cohort text);
+SELECT * FROM students;
+
+5. Create the table
+Use TablePlus
