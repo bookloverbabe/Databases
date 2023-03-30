@@ -12,7 +12,7 @@ Table name (always plural): student
 
 student name | cohort
 
-3. Column types = string/text
+3. Column types
 id = SERIAL
 name = text
 cohort = text

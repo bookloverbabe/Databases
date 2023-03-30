@@ -1,0 +1,42 @@
+Database name = movies_directory
+
+1. user story
+As a person who loves movies,
+So I can list all my favourite movies
+I want to see a list of movies' titles.
+
+As a person who loves movies,
+So I can list all my favourite movies
+I want to see a list of movies' genres.
+
+As a person who loves movies,
+So I can list all my favourite movies
+I want to see a list of movies' release year.
+
+Nouns: movie titles, genres, release year
+
+2. Table name and columns
+Name of the table (always plural): movies
+
+Column names: title, genre, release_year
+
+3. Column types
+id = SERIAL
+title = text
+genre = text
+release_year = numeric
+
+4. Write the SQL
+CREATE TABLE movies (
+  id SERIAL PRIMARY KEY,
+  title text,
+  genre text,
+  release_year int);
+SELECT * FROM movies;
+
+5. Create the table
+Use TablePlus
+
+To verify your work, make sure to run an INSERT query to insert a new movie record, and then a SELECT query to list the records.
+INSERT INTO movies (id, title, genre, release_year) VALUES (1, 'The Avengers', 'action', 2012);
+SELECT * FROM movies;
