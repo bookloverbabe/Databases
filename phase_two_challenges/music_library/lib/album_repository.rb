@@ -21,7 +21,7 @@ class AlbumRepository
 
   def find(id)
     # Executes the SQL query:
-    sql = 'SELECT id, title, release_year, artist_id FROM albums WHERE id = $1;' # Set id here to $1
+    sql = 'SELECT id, title, release_year, artist_id FROM albums WHERE id = $1;' # Set id here to $1, $1 is the placeholder for a parameter in SQL query.
     # Returns a single Student object.
     sql_params = [id]
     result_set = DatabaseConnection.exec_params(sql, sql_params)
